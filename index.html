@@ -65,7 +65,7 @@
                         <label for="name" class="margin-form">
                          <span class="form-text">Имя</span>
                         </label>
-                         <input class="form-instruments" id="name" type="text" name="FirstName" placeholder="Имя">
+                         <input class="form-instruments" id="name" type="text" name="FirstName">
                         <svg class="svg-form">
                         <use href="./images/sprite-modal.svg#icon-VectorMan"></use>
                         </svg>
@@ -74,7 +74,7 @@
                         <label for="Tel" class="margin-form">
                         <span class="form-text margin-form">Телефон</span>
                         </label>
-                        <input class="form-instruments" id="Tel" type="Tel" name="Tel" placeholder="Телефон">
+                        <input class="form-instruments" id="Tel" type="Tel" name="Tel">
                         <svg class="svg-tel">
                             <use href="./images/sprite-modal.svg#icon-VectorTel"></use>
                         </svg>
@@ -83,21 +83,23 @@
                         <label for="Mail" class="margin-form">
                         <span class="form-text margin-form">Почта</span>
                         </label>
-                        <input class="form-instruments" id="Mail" type="Email" name="Mail" placeholder="Почта">
+                        <input class="form-instruments" id="Mail" type="Email" name="Mail" >
                         <svg class="svg-mail">
                             <use href="./images/sprite-modal.svg#icon-VectorMail"></use>
                         </svg>
                     </div>
                     <label for="comment" class="margin-form">
                         <span class="form-text margin-form">Коментарий</span>
+                        <textarea
+                        id="comment"
+                        class="textarea"
+                        name="comment"
+                        rows="15"
+                        cols="45"
+                        placeholder="Введите текст">
+                    </textarea>
                     </label>
-                    <textarea
-                    id="comment"
-                    class="textarea"
-                    name="comment"
-                    rows="15"
-                    placeholder="Введите текст">
-                </textarea>
+                   
                 <div role="group" class="div-padding">
                     <label class="container agree-radio"><span class="text-agree">Соглашаюсь с рассылкой и принимаю</span><a href=""><span class="text-agree blue">Условия договора</span></a>
                         <input type="checkbox">

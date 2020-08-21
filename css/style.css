@@ -259,7 +259,8 @@ color:var(--accent-color);
 input{
     padding-left: 42px;
 }
-.close-modal:hover{
+.close-modal:hover ,
+.close-modal:focus{
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
@@ -311,6 +312,14 @@ input{
     padding-left: 16px;
     padding-top: 12px;
 }
+.textarea:focus{
+    outline-color: var(--accent-color);
+    border: 1px;
+    border-radius: 4px; 
+}
+.textarea:focus::placeholder{
+    color: var(--accent-color);
+}
 .textarea::placeholder{
     color: var(--primary-text-color);
     font-size: 14px;
@@ -349,6 +358,16 @@ input{
     top: 60%;
     pointer-events: none;
 }
+.form-instruments:focus + .svg-form ,
+.form-instruments:focus + .svg-tel ,
+.form-instruments:focus + .svg-mail {
+    fill: var(--accent-color);
+}
+.form-instruments:focus{
+    outline: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
 .text-agree{
     font-size: 14px;
     line-height: 1.7;
