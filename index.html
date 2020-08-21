@@ -54,8 +54,59 @@
         </div>
         <div data-backdrop class="backdrop is-hidden" >
             <div class="modal">
-                <p class="text-width">Оставьте свои данные,мы вам перезвоним</p>
-                <button data-close-modal class="close-modal">X</button>
+                <button data-close-modal class="close-modal">
+                    <svg class="icn-svg">
+                        <use href="./images/sprite-modal.svg#icon-VectorX"></use>
+                    </svg>
+                </button>
+                <p class="modal-text">Оставьте свои данные,мы вам перезвоним</p>
+                <form class="form-corect js-speaker-form">
+                    <div class="position-svg">
+                        <label for="name" class="margin-form">
+                         <span class="form-text">Имя</span>
+                        </label>
+                         <input class="form-instruments" id="name" type="text" name="FirstName" placeholder="Имя">
+                        <svg class="svg-form">
+                        <use href="./images/sprite-modal.svg#icon-VectorMan"></use>
+                        </svg>
+                   </div>
+                   <div class="position-svg">
+                        <label for="Tel" class="margin-form">
+                        <span class="form-text margin-form">Телефон</span>
+                        </label>
+                        <input class="form-instruments" id="Tel" type="Tel" name="Tel" placeholder="Телефон">
+                        <svg class="svg-tel">
+                            <use href="./images/sprite-modal.svg#icon-VectorTel"></use>
+                        </svg>
+                    </div>
+                    <div class="position-svg">
+                        <label for="Mail" class="margin-form">
+                        <span class="form-text margin-form">Почта</span>
+                        </label>
+                        <input class="form-instruments" id="Mail" type="Email" name="Mail" placeholder="Почта">
+                        <svg class="svg-mail">
+                            <use href="./images/sprite-modal.svg#icon-VectorMail"></use>
+                        </svg>
+                    </div>
+                    <label for="comment" class="margin-form">
+                        <span class="form-text margin-form">Коментарий</span>
+                    </label>
+                    <textarea
+                    id="comment"
+                    class="textarea"
+                    name="comment"
+                    rows="15"
+                    placeholder="Введите текст">
+                </textarea>
+                <div role="group" class="div-padding">
+                    <label class="container agree-radio"><span class="text-agree">Соглашаюсь с рассылкой и принимаю</span><a href=""><span class="text-agree blue">Условия договора</span></a>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <button type="submit" class="button-modal ">Отправить</button>
+                </div>
+                
+                </form>
             </div>
         </div>
         
@@ -368,11 +419,26 @@
     </div>
     <div class="email">
         <span class="follow">Подпишитесь на рассылку</span>
-        <input type="Email" name="Email" placeholder="E-mail" class="form-mail">
+        <input type="text" name="Email" placeholder="E-mail" class="form-mail">
         <button class="button button-item">Подписаться</button>
     </div>
 </div>
     </footer>
+    <script>
+        (() => {
+          document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
     <script>
         const refs = {
           openModalBtn: document.querySelector("[data-open-modal]"),
@@ -393,5 +459,6 @@
           console.log("Это клик в бекдроп");
         }
       </script>
+   
 </body>
 </html>
